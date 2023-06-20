@@ -1,19 +1,12 @@
-.root {
-    --mc: #21819E;
-}
-
-
-
-.wrap {
-    height: 200vh;
-}
+.wrap {}
 
 .header {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 9999;
-    padding: 0 460px;
+    padding: 0 400px;
 
     display: flex;
     justify-content: space-between;
@@ -26,15 +19,38 @@
     background: #fff;
 }
 
-.header .logo {
-    display: block;
-
+.header:hover {
+    color: #555;
 }
 
+
+.header_wrap {
+    z-index: 999;
+    display: block;
+}
 
 .header .gnb>ul {
     display: flex;
+
 }
+
+
+/* .header .gnb>ul>li::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 100%;
+    height: 0;
+    width: 0;
+    background: #21819E;
+    transition: 0.5s;
+}
+
+.header .gnb>ul>li:hover::before {
+    width: 100%;
+    height: 2px;
+} */
+
 
 .header .gnb>ul>li>a {
     padding: 0 50px;
@@ -43,12 +59,16 @@
 
 .header .gnb>ul>li {
     position: relative;
+
 }
+
 
 .header .gnb>ul>li a {
     display: block;
     text-align: center;
 }
+
+
 
 .header .gnb>ul>li .submenu {
     position: absolute;
@@ -66,19 +86,19 @@
     height: 0;
     overflow: hidden;
 
-    transition: 0.5s;
+    opacity: 0;
+    transition: 0.2s;
 }
-
-
 
 .header:hover .gnb>ul>li .submenu {
     height: 220px;
+    opacity: 1;
 }
 
 .header .gnb::before {
     content: "";
     position: absolute;
-    top: 100px;
+    top: 0;
     left: 0;
     right: 0;
     height: 0;
@@ -89,14 +109,22 @@
 }
 
 .header:hover .gnb::before {
-    height: 240px;
+    height: 300px;
+}
+
+.header .link {
+    z-index: 999;
 }
 
 .header .link i {
     font-size: 25px;
-    color: #21819E;
+    color: rgb(33, 129, 158, 0.7);
     margin: 0 10px;
     cursor: pointer;
+}
+
+.header .link i:hover {
+    color: rgb(33, 129, 158)
 }
 
 
@@ -106,48 +134,221 @@
 .main_Visual {
     background: url(../images/mv_bg.jpg)no-repeat;
     position: relative;
-    height: 100vh;
-
+    overflow: hidden;
 }
+
+.main_Visual .sec_img {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+}
+
 
 .main_Visual .itm {
     position: relative;
-    min-height: 1000px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto 130%;
-}
+    min-height: 968px;
+    height: 640px;
+    width: 100%;
 
-.main_Visual .itm .inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(0, -50%);
-    margin: 0 0 0 -700px;
 }
-
-/* 
 
 .main_Visual .itm01 {
-    background-image: url(../images/감자돌이.png);
+    background: url(../images/감자돌이.png)no-repeat;
 }
 
 .main_Visual .itm02 {
-    background-image: url(../images/통큰오짱.png);
+    background: url(../images/통큰오짱.png)no-repeat;
 }
 
 .main_Visual .itm03 {
-    background-image: url(../images/차새대.png);
+    background: url(../images/차새대.png)no-repeat;
 }
 
 .main_Visual .itm04 {
-    background-image: url(../images/차돌.png);
+    background: url(../images/차돌.png)no-repeat;
 }
 
 .main_Visual .itm05 {
-    background-image: url(../images/반반.png);
+    background: url(../images/반반.png)no-repeat;
 }
 
 .main_Visual .itm06 {
-    background-image: url(../images/마라이징.png);
-} */
+    background: url(../images/마라이징.png)no-repeat;
+}
+
+/* ----------------------------------------- */
+
+.main_Visual .txt {
+    position: absolute;
+    top: 28%;
+    right: 21%;
+    white-space: nowrap;
+    color: #333;
+}
+
+.main_Visual .txt h2 {
+    font-size: 100px;
+    font-weight: 800;
+    margin: 0 0 100px 0;
+    font-family: 'Noto Serif KR';
+    line-height: 110px;
+}
+
+.main_Visual .txt h2 span {
+    display: block;
+    color: #21819E;
+}
+
+.main_Visual .txt p {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.main_Visual .txt p strong {
+    font-weight: 600;
+}
+
+/* ↓ 버튼만들기 ↓ */
+
+.main_Visual .arrows {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    flex-direction: column;
+    gap: 30px;
+    display: flex;
+}
+
+.main_Visual .arrows i {
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main_Visual .arrows i:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* ---------------------------------- */
+
+.main_Content .world {
+    position: relative;
+    background: url(../images/world_bg.jpg);
+    height: 650px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_Content .world_txt {
+    color: #fff;
+    text-align: center;
+}
+
+.main_Content .world_txt h3 {
+    font-size: 70px;
+    font-weight: 700;
+    font-family: 'Noto Serif KR';
+    margin: 100px 0 50px 0;
+}
+
+.main_Content .world_txt p {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.main_Content .world_txt p strong {
+    font-weight: 700;
+}
+
+.main_Content .world_img {
+    position: absolute;
+    bottom: -30%;
+}
+
+/* ------------------------------------ */
+
+.main_Event {
+    background: #ddd;
+}
+
+.main_Event .inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main_Event .event_Slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 50px;
+}
+
+/* ------------------------------------ */
+
+.main_Event .event_Box01 {
+    border: 1px solid tomato;
+}
+
+.main_Event .event_Box01 h3 {
+    font-size: 70px;
+    font-weight: 800;
+    font-family: 'Noto Serif KR';
+    line-height: 85px;
+    margin: 50px 0 35px 0;
+}
+
+.main_Event .event_Box01 h3 strong {
+    color: #21819E;
+}
+
+.main_Event .event_Box01 p {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 30px 0;
+    font-weight: 400;
+}
+
+.main_Event .event_Box01 p strong {
+    font-weight: 700;
+}
+
+.main_Event .mini_Slide01 .chat {
+    display: flex;
+}
+
+.main_Event .mini_Slide01 .chat img {
+    height: 80px;
+    width: 80px;
+    margin: 10px 10px;
+}
+
+.main_Event .mini_Slide01 .chat p {
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 10px;
+    letter-spacing: -0.02em;
+    line-height: 163%;
+    color: #1c1c1c;
+}
+
+/* ---------------------------- */
+
+.main_Event .event_Box02 {
+    border: 1px solid yellow;
+    background: #21819E;
+    position: relative;
+}
+
+.main_Event .event_Box02 .mini_Slide02 {
+    position: absolute;
+    display: flex;
+}
+
+.event_Box02 .mini_Slide02 .menu {}
