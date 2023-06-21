@@ -31,9 +31,31 @@ $(function () {
         slidesToShow: 2,
     });
 
-    // $('.mini_Slide02').slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     // arrows: false,
+    const miniSlide = new Swiper('.mini_Slide02', {
+
+        loop: true,
+        parallax: true,
+    });
+
+    $('.main_Event .mini_Arrows .left').on('click', function () {
+        miniSlide.slidePrev();
+    });
+    $('.main_Event .mini_Arrows .right').on('click', function () {
+        miniSlide.slideNext();
+    });
+
+    $('.mini_Slide03').slick({
+        vertical: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+    });
+
+    // $('.mobile_btn').on('click', function () {
+    //     $(this).toggleClass('on');
+    //     $('.gnb').toggleClass('on');
+    //     $('.h1').toggleClass('on');
     // });
+
+
 });

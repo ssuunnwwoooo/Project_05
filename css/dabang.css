@@ -272,14 +272,19 @@
 
 .main_Event {
     background: #ddd;
+    position: relative;
 }
 
 .main_Event .inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.main_Event .mini_Arrows i {
+    font-size: 40px;
 }
 
 .main_Event .event_Slide {
@@ -292,9 +297,7 @@
 
 /* ------------------------------------ */
 
-.main_Event .event_Box01 {
-    border: 1px solid tomato;
-}
+.main_Event .event_Box01 {}
 
 .main_Event .event_Box01 h3 {
     font-size: 70px;
@@ -321,6 +324,7 @@
 
 .main_Event .mini_Slide01 .chat {
     display: flex;
+    align-items: center;
 }
 
 .main_Event .mini_Slide01 .chat img {
@@ -332,23 +336,101 @@
 .main_Event .mini_Slide01 .chat p {
     font-size: 15px;
     font-weight: 300;
-    padding-top: 10px;
     letter-spacing: -0.02em;
     line-height: 163%;
     color: #1c1c1c;
+    padding: 20px 0 0 0;
+
 }
 
 /* ---------------------------- */
 
 .main_Event .event_Box02 {
-    border: 1px solid yellow;
     background: #21819E;
     position: relative;
+    overflow: hidden;
 }
 
 .main_Event .event_Box02 .mini_Slide02 {
     position: absolute;
     display: flex;
+    top: 20px;
+    left: 100px;
 }
 
-.event_Box02 .mini_Slide02 .menu {}
+.main_Event .mini_Arrows {
+    position: absolute;
+    display: flex;
+    top: 485px;
+    left: 891px;
+}
+
+.main_Event .mini_Arrows i {
+    font-size: 30px;
+    padding: 15px;
+}
+
+.main_Event .mini_Arrows .left {
+    background: rgb(255, 255, 255, 0.35);
+    color: #21819E;
+}
+
+.main_Event .mini_Arrows .right {
+    background: rgba(0, 0, 0, 0.1);
+    color: #e6e6e6;
+}
+
+/* ---------------------------------------------------- */
+
+.event_Box03 {
+    border: 1px solid red;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+}
+
+.event_Box03 .mini_Slide03 {}
+
+/* ---------------------------- */
+
+
+
+.event_Box06 {
+    background-color: #fff;
+}
+
+/* -------------------------------- */
+
+.sns {
+    background: #ddd;
+    padding: 60px 0;
+}
+
+.sns ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.sns ul>li>a {
+    display: flex;
+}
+
+.sns .txt_area {
+    margin: 8px 0 0 15px;
+    /* vertical-align: middle; */
+
+}
+
+.sns .txt_area p {
+    line-height: 25px;
+    font-weight: 300;
+}
+
+.sns .txt_area span {
+    display: block;
+}
+
+.sns .txt_area strong {
+    font-size: 35px;
+}
