@@ -1,4 +1,6 @@
-.wrap {}
+.wrap {
+    min-width: 1900px;
+}
 
 .header {
     position: fixed;
@@ -6,12 +8,17 @@
     left: 0;
     right: 0;
     z-index: 9999;
-    padding: 0 450px;
+}
 
+.header .header_wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     line-height: 100px;
     white-space: nowrap;
+
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .header.on {
@@ -23,9 +30,11 @@
 }
 
 
-.header_wrap {
+.header h1 {
+    min-width: 100px;
     z-index: 999;
     margin: 5px 0;
+    padding: 15px 0;
 }
 
 .header .gnb>ul {
@@ -276,8 +285,8 @@
 /* ------------------------------------ */
 
 .main_Event {
-    background: #ddd;
     position: relative;
+    background: #ddd url(../images/차돌.png) no-repeat right center;
 }
 
 .main_Event .inner {
@@ -302,7 +311,9 @@
 
 /* ------------------------------------ */
 
-.main_Event .event_Box01 {}
+.main_Event .event_Box01 {
+    background: #ddd;
+}
 
 .main_Event .event_Box01 h3 {
     font-size: 70px;
@@ -388,24 +399,87 @@
 /* ---------------------------------------------------- */
 
 .event_Box03 {
-    border: 1px solid red;
-    position: relative;
-    background-color: #fff;
+    background: #fff;
     display: flex;
 }
 
-.event_Box03 .mini_Slide03 {}
+.event_Box03 .mini_Slide03 {
+    position: relative;
+
+}
+
+
+.event_Box03 .mini_Slide03 .hero a {
+    display: flex;
+}
+
+.event_Box03 .mini_Slide03 .hero img {
+    width: 450px;
+    filter: grayscale(80%)
+}
+
+
+.event_Box03 .hero p {
+    position: absolute;
+    font-size: 0;
+    font-weight: 300;
+    line-height: 163%;
+    color: #f0f0f0;
+    padding: 5px 0 0 5px;
+    background: rgba(0, 0, 0, 0.3);
+
+    transform: translate(0, 415px);
+
+    font-family: 'Noto Serif KR';
+
+}
+
+.event_Box03 .hero:hover p {
+    font-size: 18px;
+
+}
+
+
+.event_Box03 .mini_Slide03 .hero img:hover {
+    filter: none;
+}
+
+
+.event_Box03 .tin_arrows {
+    position: relative;
+    font-size: 35px;
+    color: #b9b9b9;
+}
+
+.event_Box03 .tin_arrows::before {
+    position: absolute;
+    content: "";
+    top: 45%;
+    left: -125%;
+    height: 1px;
+    width: 18px;
+    background: #b9b9b9;
+}
+
+.event_Box03 .tin_arrows i {
+    position: relative;
+    transform: translate(-150%, 20%);
+    margin: 80px 0;
+}
 
 /* ---------------------------- */
 
-.event_Box04 {
-    background: url(../images/차돌.png);
-}
+.event_Box04 {}
 
 
 
 .event_Box06 {
-    background-color: #fff;
+    background: #fff;
+    display: flex;
+}
+
+.event_Box06 .mini_Slide06 .store {
+    display: flex;
 }
 
 /* -------------------------------- */

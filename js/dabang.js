@@ -51,11 +51,26 @@ $(function () {
         arrows: false,
     });
 
-    // $('.mobile_btn').on('click', function () {
-    //     $(this).toggleClass('on');
-    //     $('.gnb').toggleClass('on');
-    //     $('.h1').toggleClass('on');
-    // });
+    $('.main_Event .tin_arrows .up').on('click', function () {
+        $('.mini_Slide03').slick('slickPrev')
+    });
+    $('.main_Event .tin_arrows .down').on('click', function () {
+        $('.mini_Slide03').slick('slickNext')
+    });
 
+
+    $('.mini_Slide06').slick({
+        vertical: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+    });
+
+    $('.main_Event .tin_Arrows .up').on('click', function () {
+        $('.mini_Slide06').slick('slickPrev')
+    });
+    $('.main_Event .tin_Arrows .down').on('click', function () {
+        $('.mini_Slide06').slick('slickNext')
+    });
 
 });
