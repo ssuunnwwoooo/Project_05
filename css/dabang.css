@@ -6,13 +6,12 @@
     left: 0;
     right: 0;
     z-index: 9999;
-    padding: 0 400px;
+    padding: 0 450px;
 
     display: flex;
     justify-content: space-between;
     line-height: 100px;
     white-space: nowrap;
-
 }
 
 .header.on {
@@ -26,35 +25,34 @@
 
 .header_wrap {
     z-index: 999;
-    display: block;
+    margin: 5px 0;
 }
 
 .header .gnb>ul {
     display: flex;
-
 }
-
-
-/* .header .gnb>ul>li::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 100%;
-    height: 0;
-    width: 0;
-    background: #21819E;
-    transition: 0.5s;
-}
-
-.header .gnb>ul>li:hover::before {
-    width: 100%;
-    height: 2px;
-} */
 
 
 .header .gnb>ul>li>a {
+    position: relative;
     padding: 0 50px;
     font-size: 20px;
+}
+
+.header .gnb>ul>li>a::before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transform: translate(-50%, 0);
+    background: #21819E;
+}
+
+.header .gnb>ul>li>a:hover::before {
+    width: 100px;
+    transition: 0.5s;
 }
 
 .header .gnb>ul>li {
@@ -81,19 +79,26 @@
     color: #555;
 
     margin: 25px 0 0 0;
-    width: 1200px;
+    max-width: 1200px;
 
     height: 0;
     overflow: hidden;
 
     opacity: 0;
-    transition: 0.2s;
+    transition: 0.125s;
 }
 
 .header:hover .gnb>ul>li .submenu {
     height: 220px;
     opacity: 1;
 }
+
+.header .submenu a:hover {
+    color: #21819E;
+    font-weight: 500;
+}
+
+
 
 .header .gnb::before {
     content: "";
@@ -392,6 +397,10 @@
 .event_Box03 .mini_Slide03 {}
 
 /* ---------------------------- */
+
+.event_Box04 {
+    background: url(../images/차돌.png);
+}
 
 
 
