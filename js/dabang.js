@@ -58,7 +58,6 @@ $(function () {
         $('.mini_Slide03').slick('slickNext')
     });
 
-
     $('.mini_Slide06').slick({
         vertical: true,
         autoplay: true,
@@ -72,5 +71,29 @@ $(function () {
     $('.main_Event .tin_Arrows .down').on('click', function () {
         $('.mini_Slide06').slick('slickNext')
     });
+
+    const mediaSlide = new Swiper('.media_slide', {
+        loop: true,
+        //parallax: true,
+        slidesPerView: 3,
+        spaceBetween: 1,
+        //autoplayDisableOnInteraction: true,
+        autoplay: {
+            delay: 2500,
+            // disableOnInteraction: true,
+            // pauseOnMouseEnter: true,
+        },
+
+    });
+
+    $('.media_slide').on('mouseenter', function (e) {
+        console.log('stop autoplay');
+        mediaSlide.autoplay.pause();
+    })
+    $('.media_slide').on('mouseleave', function (e) {
+        console.log('start autoplay');
+        mediaSlide.autoplay.start();
+    });
+
 
 });
