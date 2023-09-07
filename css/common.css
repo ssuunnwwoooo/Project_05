@@ -1,12 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
+@font-face {
+    font-family: '양진체';
+    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: inherit;
+    font-weight: inherit;
+}
 
 body {
-    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    word-break: keep-all;
+    color: #161616;
 }
 
 .blind {
@@ -18,20 +39,19 @@ body {
     overflow: hidden;
 }
 
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
 .inner {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 .sec {
     padding: 100px;
-}
-
-.sec .tit {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
 }
 
 .bg {
@@ -41,4 +61,36 @@ body {
 p {
     font-size: 16px;
     line-height: 20px;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+button,
+input,
+textarea {
+    vertical-align: middle;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
