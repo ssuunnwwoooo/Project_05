@@ -130,10 +130,6 @@ $(function () {
         }, 50);
     }
 
-    const step = now / 10;
-
-    now -= step;
-
 
     $('.m_btn').on('click', function () {
         $(this).toggleClass('on');

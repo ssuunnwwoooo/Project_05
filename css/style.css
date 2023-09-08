@@ -173,75 +173,75 @@
 }
 
 .main_Visual .itm01 {
-    background: url(../images/감자돌이.png)no-repeat;
+    background: url(../images/main01.png)no-repeat;
 }
 
 .main_Visual .itm01::before {
-    background: url(../images/감자돌이1.jpg);
+    background: url(../images/main01_1.jpg);
 }
 
 .main_Visual .itm01::after {
-    background: url(../images/감자돌이2.jpg);
+    background: url(../images/main01_2.jpg);
 }
 
 .main_Visual .itm02 {
-    background: url(../images/통큰오짱.png)no-repeat;
+    background: url(../images/main02.png)no-repeat;
 }
 
 .main_Visual .itm02::before {
-    background: url(../images/통큰오짱1.jpg);
+    background: url(../images/main02_1.jpg);
 }
 
 .main_Visual .itm02::after {
-    background: url(../images/통큰오짱2.jpg);
+    background: url(../images/main02_2.jpg);
 }
 
 .main_Visual .itm03 {
-    background: url(../images/차새대.png)no-repeat;
+    background: url(../images/main03.png)no-repeat;
 }
 
 .main_Visual .itm03::before {
-    background: url(../images/차새대1.jpg);
+    background: url(../images/main03_1.jpg);
 }
 
 .main_Visual .itm03::after {
-    background: url(../images/차새대2.jpg);
+    background: url(../images/main03_2.jpg);
 }
 
 .main_Visual .itm04 {
-    background: url(../images/차돌.png)no-repeat;
+    background: url(../images/main04.png)no-repeat;
 }
 
 .main_Visual .itm04::before {
-    background: url(../images/차돌1.jpg);
+    background: url(../images/main04_1.jpg);
 }
 
 .main_Visual .itm04::after {
-    background: url(../images/차돌2.jpg);
+    background: url(../images/main04_2.jpg);
 }
 
 .main_Visual .itm05 {
-    background: url(../images/반반.png)no-repeat;
+    background: url(../images/main05.png)no-repeat;
 }
 
 .main_Visual .itm05::before {
-    background: url(../images/반반1.jpg);
+    background: url(../images/main05_1.jpg);
 }
 
 .main_Visual .itm05::after {
-    background: url(../images/반반2.jpg);
+    background: url(../images/main05_2.jpg);
 }
 
 .main_Visual .itm06 {
-    background: url(../images/마라이징.png)no-repeat;
+    background: url(../images/main06.png)no-repeat;
 }
 
 .main_Visual .itm06::before {
-    background: url(../images/마라이징1.jpg);
+    background: url(../images/main06_1.jpg);
 }
 
 .main_Visual .itm06::after {
-    background: url(../images/마라이징2.jpg);
+    background: url(../images/main06_2.jpg);
 }
 
 
@@ -754,27 +754,23 @@
         left: 0;
         width: 60px;
         height: 60px;
+        background: url(../images/btn_stm.jpg) no-repeat center center/cover;
+        z-index: 100000;
+    }
 
-        z-index: 10000;
+    .m_btn.on {
+        left: auto;
+        right: 0;
+        background: url(../images/stm_close.png) no-repeat center center/cover;
     }
 
     .header {
-        position: fixed;
-        inset: 0 0 0 0;
-        height: 105px;
-        z-index: 9999;
-
-        transition: 0.3s;
         /* r */
         height: 70px;
         background: #fff;
     }
 
     .header .header_wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        white-space: nowrap;
         /* r */
         justify-content: center;
         vertical-align: middle;
@@ -783,19 +779,10 @@
 
     }
 
-    .header:hover {
-        color: #555;
-    }
-
-
     .header h1 {
-        max-width: 120px;
-        z-index: 999;
-        margin: 10px 0;
         /* r */
         max-width: 100px;
         margin-left: 30px;
-
     }
 
 
@@ -804,48 +791,45 @@
         position: fixed;
         inset: 0 0 0 0;
         background: rgba(33, 129, 158, 0.973);
+        z-index: 10000;
+
+        visibility: hidden;
         opacity: 0;
     }
 
     .header .gnb.on {
+        visibility: visible;
         opacity: 1;
     }
 
 
     .header .gnb>ul {
-        display: flex;
-        gap: 30px;
         /* r */
         flex-direction: column;
+        margin-top: 70px;
         gap: 0;
     }
 
 
     .header .gnb>ul>li>a {
-        position: relative;
-        font-size: 20px;
-        font-weight: 500;
-        padding: 40px;
         /* r */
-        font-size: 15px;
-        margin-top: 50px;
-        padding: 30px;
+        font-size: 20px;
+        font-weight: 600;
+
+        color: #f1f1f1;
+        width: 150px;
     }
 
     .header .gnb>ul>li {
+        /* r */
         position: relative;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+        padding: 15px 0;
     }
 
     .header .gnb>ul>li>::before {
-        content: "";
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        transform: translate(-50%, 0);
-        transition: 0.5s;
-        background: #21819E;
         /* r */
         display: none;
     }
@@ -876,89 +860,46 @@
         opacity: 0;
         transition: 0.125s;
         /* r */
+        position: relative;
+        align-items: center;
+        top: 0px;
+        left: 0;
         opacity: 1;
-        height: 100%;
-    }
-
-    .header:hover .gnb>ul>li .submenu {
         height: auto;
-        opacity: 1;
-    }
-
-    .header .submenu a:hover {
-        color: #21819E;
-        font-weight: 500;
+        font-size: 17px;
+        line-height: 25px;
+        transform: none;
+        color: #b7e3f1;
     }
 
 
 
     .header .gnb::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 0;
-        background: #fff;
-        border-top: 1px solid #ddd;
-
-        transition: 0.5s;
+        /* r */
+        display: none;
     }
-
-    .header:hover .gnb::before {
-        height: 320px;
-    }
-
-    .header .link {
-        z-index: 999;
-    }
-
-    .header .link i {
-        font-size: 25px;
-        color: rgb(33, 129, 158, 0.7);
-        margin: 0 10px;
-        cursor: pointer;
-    }
-
-    .header .link i:hover {
-        color: rgb(33, 129, 158)
-    }
-
 
 
     /* --------------------------------------- */
 
     .main_Visual {
-        background: url(../images/mv_bg.jpg)no-repeat;
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
         /* r */
         margin-top: 50px;
     }
 
     .main_Slide {
-        background: url(../images/mv1_illust1.png) no-repeat right 30px bottom 30px;
         /* r */
         background: none;
     }
 
     .main_Visual .itm {
-        position: relative;
-        min-height: 968px;
-        height: 640px;
-        width: 100%;
         /* r */
+        min-height: auto;
+        height: 100vh;
 
     }
 
     .main_Visual .itm::before {
-        content: "";
-        position: absolute;
-        top: 13%;
-        left: 33%;
-        width: 250px;
-        height: 320px;
         /* r */
         top: 10%;
         left: 60%;
@@ -967,12 +908,6 @@
     }
 
     .main_Visual .itm::after {
-        content: "";
-        position: absolute;
-        bottom: 10%;
-        left: 5%;
-        width: 250px;
-        height: 320px;
         /* r */
         bottom: 5%;
         left: 5%;
@@ -981,117 +916,106 @@
     }
 
     .main_Visual .itm01 {
-        background: url(../images/감자돌이.png)no-repeat top center/cover;
+        background: url(../images/main01.png)no-repeat top center/cover;
         min-height: 30px;
         width: 450px;
         height: 450px;
     }
 
     .main_Visual .itm01::before {
-        background: url(../images/감자돌이1.jpg)no-repeat center center/cover;
+        background: url(../images/main01_1.jpg)no-repeat center center/cover;
     }
 
     .main_Visual .itm01::after {
-        background: url(../images/감자돌이2.jpg)no-repeat center center/cover;
+        background: url(../images/main01_2.jpg)no-repeat center center/cover;
     }
 
     .main_Visual .itm02 {
-        background: url(../images/통큰오짱.png)no-repeat top center/cover;
+        background: url(../images/main02.png)no-repeat top center/cover;
         min-height: 30px;
         width: 450px;
         height: 450px;
     }
 
     .main_Visual .itm02::before {
-        background: url(../images/통큰오짱1.jpg)no-repeat center center/cover;
+        background: url(../images/main02_1.jpg)no-repeat center center/cover;
     }
 
     .main_Visual .itm02::after {
-        background: url(../images/통큰오짱2.jpg)no-repeat center center/cover;
+        background: url(../images/main02_2.jpg)no-repeat center center/cover;
     }
 
     .main_Visual .itm03 {
-        background: url(../images/차새대.png)no-repeat top center/cover;
+        background: url(../images/main03.png)no-repeat top center/cover;
         min-height: 30px;
         width: 450px;
         height: 450px;
     }
 
     .main_Visual .itm03::before {
-        background: url(../images/차새대1.jpg)no-repeat center center/cover;
+        background: url(../images/main03_1.jpg)no-repeat center center/cover;
     }
 
     .main_Visual .itm03::after {
-        background: url(../images/차새대2.jpg)no-repeat center center/cover;
+        background: url(../images/main03_2.jpg)no-repeat center center/cover;
     }
 
     .main_Visual .itm04 {
-        background: url(../images/차돌.png)no-repeat top center/cover;
+        background: url(../images/main04.png)no-repeat top center/cover;
         min-height: 30px;
         width: 450px;
         height: 450px;
     }
 
     .main_Visual .itm04::before {
-        background: url(../images/차돌1.jpg)no-repeat center center/cover;
+        background: url(../images/main04_1.jpg)no-repeat center center/cover;
     }
 
     .main_Visual .itm04::after {
-        background: url(../images/차돌2.jpg)no-repeat center center/cover;
+        background: url(../images/main04_2.jpg)no-repeat center center/cover;
     }
 
     .main_Visual .itm05 {
-        background: url(../images/반반.png)no-repeat top center/cover;
+        background: url(../images/main05.png)no-repeat top center/cover;
         min-height: 30px;
         width: 450px;
         height: 450px;
     }
 
     .main_Visual .itm05::before {
-        background: url(../images/반반1.jpg)no-repeat center center/cover;
+        background: url(../images/main05_1.jpg)no-repeat center center/cover;
     }
 
     .main_Visual .itm05::after {
-        background: url(../images/반반2.jpg)no-repeat center center/cover;
+        background: url(../images/main05_2.jpg)no-repeat center center/contain;
     }
 
     .main_Visual .itm06 {
-        background: url(../images/마라이징.png)no-repeat top center/cover;
-        /* r */
-        /* 여기만 추가하면 글자가 사라지는 이유?? */
-
+        background: url(../images/brmv1_img12.jpg)no-repeat top center/cover;
     }
 
     .main_Visual .itm06::before {
-        background: url(../images/마라이징1.jpg)no-repeat center center/cover;
+        /* r */
+        display: none;
     }
 
     .main_Visual .itm06::after {
-        background: url(../images/마라이징2.jpg)no-repeat center center/cover;
+        /* r */
+        display: none;
     }
 
 
     /* ----------------------------------------- */
 
     .main_Visual .txt {
-        position: absolute;
-        top: 28%;
-        right: 21%;
-        white-space: nowrap;
-        color: #333;
         /* r */
-        top: 100%;
+        top: 105%;
         left: 0;
         padding: 0 15px;
         z-index: 5;
     }
 
     .main_Visual .txt h2 {
-        font-size: 100px;
-        font-weight: 800;
-        margin: 0 0 100px 0;
-        font-family: 'Noto Serif KR';
-        line-height: 110px;
         /* r */
         text-align: center;
         font-size: 48px;
@@ -1100,65 +1024,26 @@
     }
 
     .main_Visual .txt h2 span {
-        display: block;
-        color: #21819E;
         /* r */
         display: inline;
     }
 
     .main_Visual .txt p {
-        font-size: 25px;
-        line-height: 30px;
-        font-weight: 400;
         /* r */
         font-size: 15px;
-    }
-
-    .main_Visual .txt p strong {
-        font-weight: 600;
     }
 
     /* ↓ 버튼만들기 ↓ */
 
     .main_Visual .arrows {
-        position: absolute;
-        flex-direction: column;
-        top: 28%;
-        left: 50%;
-        gap: 30px;
-        display: flex;
         /* r */
         z-index: 555;
-    }
-
-    .main_Visual .arrows i {
-        font-size: 40px;
-        color: rgba(0, 0, 0, 0.7);
-        padding: 15px;
-        cursor: pointer;
-    }
-
-    .main_Visual .arrows i:hover {
-        color: rgb(0, 0, 0);
-    }
-
-    /* ------------------------------------ */
-
-    .main_Event {
-        position: relative;
-        background-color: #ddd;
-    }
-
-    .main_Event .event_wrap {
-        padding: 80px 0;
+        display: none;
     }
 
     /* ------------------------------------ */
 
     .main_Event .event_Box01 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 30px 0 30px 0;
         /* r */
         display: flex;
         text-align: center;
@@ -1166,11 +1051,6 @@
     }
 
     .event_Box01 .tit h3 {
-        font-size: 70px;
-        font-weight: 800;
-        font-family: 'Noto Serif KR';
-        line-height: 85px;
-        margin-bottom: 35px;
         /* r */
         font-size: 35px;
         line-height: 40px;
@@ -1178,16 +1058,8 @@
     }
 
     .event_Box01 .tit p {
-        font-size: 20px;
-        line-height: 28px;
-        margin: 0 0 30px 0;
-        font-weight: 400;
         /* r */
         font-size: 18px;
-    }
-
-    .event_Box01 .tit p strong {
-        font-weight: 700;
     }
 
     .event_Box01 .mini_Slide01 {
@@ -1196,8 +1068,6 @@
     }
 
     .event_Box01 .mini_Slide01 .chat {
-        display: flex;
-        align-items: center;
         /* r */
         display: none;
     }
@@ -1205,82 +1075,36 @@
     /* ---------------------------- */
 
     .main_Event .event_Box02 {
-        position: relative;
-        background: #21819E;
-        overflow: hidden;
-        padding: 60px 0;
         /* r */
         padding: 0;
     }
 
-    .mini_Slide02 {
-        display: flex;
-        overflow: hidden;
-    }
-
     .mini_Arrows {
-        position: absolute;
-        top: 45%;
-        left: 38%;
-        gap: 320px;
-        display: flex;
-        cursor: pointer;
-        z-index: 1;
         /* r */
         left: 17%;
         gap: 150px;
     }
 
     .mini_Arrows i {
-        font-size: 30px;
-        padding: 20px;
-        border-radius: 50%;
-        background: #fff;
-        color: #21819E;
-        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.493);
         /* r */
         font-size: 20px;
         padding: 15px;
     }
 
-
-    .mini_Slide02 img {
-        opacity: 0.5;
-        transform: scale(0.9);
-    }
-
-    .mini_Slide02 .swiper-slide-active img {
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        opacity: 1;
-    }
-
-
     /* ---------------------------------------------------- */
 
     .event_Box03 {
-        position: relative;
-        padding: 80px 0 10px 0;
-        overflow: hidden;
         /* r */
         padding: 80px 0 0 0;
     }
 
     .text-roller {
-        color: #ededed;
-        -webkit-animation: loop 50s infinite linear;
-        animation: loop 50s infinite linear;
         /* r */
         -webkit-animation: loop 10s infinite linear;
         animation: loop 10s infinite linear;
     }
 
     .text-roller span {
-        white-space: nowrap;
-        font-family: '양진체';
-        font-size: 150px;
-        font-weight: 500;
-        letter-spacing: 10px;
         /* r */
         font-size: 50px;
     }
@@ -1288,64 +1112,23 @@
     /* -------------------------------- */
 
     .sns {
-        background: #ddd;
-        padding: 10px 0 50px 0;
         /* r */
         padding: 0 15px;
     }
 
-    .sns ul {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .sns ul>li>a {
-        display: flex;
-    }
-
     .sns .txt_area {
-        margin: 8px 0 0 30px;
         /* r */
         display: none;
     }
 
 
     /* -------------------------------------- */
-    .content {
-        background: #ddd;
-        overflow: hidden;
-        padding: 60px 0;
-    }
-
-    .content_wrap {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
-    }
-
-    .con_slide .menu {
-        background: #fff;
-        margin: 0 15px;
-
-    }
-
-    .con_slide .menu:hover {
-        box-shadow: 6px 9px 15px 0px rgba(0, 0, 0, 0.1);
-    }
-
     .con_slide .menu img {
-        height: 250px;
-        width: 100%;
-        background-size: contain;
         /* r */
         height: 150px;
     }
 
     .con_slide .menu p {
-        height: 100px;
-        border-top: 1px solid #ddd;
-        padding: 50px 15px 30px 15px;
-        font-size: 18px;
-        font-weight: 500;
-        text-align: center;
         /* r */
         padding: 20px 15px;
         height: 80px;
@@ -1353,46 +1136,14 @@
         text-align: left;
     }
 
-    .con_slide .menu .mk {
-        text-align: right;
-        padding: 15px;
-        font-weight: 600;
-        color: #b6b6b6;
-    }
-
     /* -------------------------------------- */
-
-    .Media {
-        background: #fff;
-        padding: 30px 0;
-        overflow: hidden;
-        border-top: 1px solid #d4d4d4;
-    }
-
-    .Media .media_slide_wrap {
-        display: flex;
-        justify-content: space-between;
-    }
-
     .Media .media_slide_wrap h3 {
-        font-size: 30px;
-        font-weight: 500;
-        letter-spacing: 1.5px;
-        margin: 10px;
         /* r */
         font-size: 25px;
     }
 
-    .Media .media_slide {
-        margin: 5px 50px;
-        color: #666;
-        max-width: 850px;
-        overflow: hidden;
-        margin: 15px 0 0 0;
-    }
 
     .Media .media_slide li {
-        position: relative;
         /* r */
         display: none;
     }
@@ -1403,84 +1154,37 @@
     }
 
     .Media .media_slide_wrap .btn a {
-        display: flex;
-        border: 1px solid #bbbbbb;
+        /* r */
         padding: 15px 30px 13px 23px;
-        background: #fff;
     }
 
 
     /* -------------------------------------------- */
 
     .footer {
-        background: #373737;
-        padding: 50px;
-        color: #888;
         /* r */
         padding: 15px 15px 30px 15px;
     }
 
-
-    #f1 {
-        background: none;
-        padding: 10px 0;
-        border: none;
-        border-bottom: 1px solid rgb(221, 221, 221, 0.3);
-        color: rgb(221, 221, 221, 0.7);
-        width: 150px;
-        line-height: 30px;
-        /* r */
-    }
-
-    #f1 option {
-        background: rgba(0, 0, 0, 0.9);
-        color: rgb(255, 255, 255, 0.5);
-        padding: 5px 0;
-        outline: none;
-    }
-
-
     .footer .top {
-        display: flex;
-        justify-content: space-between;
         /* r */
         flex-direction: column;
         margin: 30px 0;
     }
 
     .footer .left {
-        display: flex;
-        gap: 30px;
-        font-size: 15px;
         /* r */
         gap: 30px;
         font-size: 13px;
         margin-bottom: 30px;
     }
 
-    .footer .left li {
-        position: relative;
-    }
-
-
     .footer .left li~li::before {
-        content: "";
-        position: absolute;
-        top: 30%;
-        left: -15px;
-        transform: translate(0, -50%);
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        background: #666;
         /* r */
         display: none;
     }
 
     .footer .bottom {
-        display: flex;
-        font-size: 13px;
-        gap: 15px;
         /* r */
         flex-direction: column;
     }
