@@ -1,3 +1,7 @@
+body {
+    background: #ddd;
+}
+
 .header {
     position: fixed;
     inset: 0 0 0 0;
@@ -144,13 +148,13 @@
 }
 
 .main_Slide {
-    background: url(../images/mv1_illust1.png) no-repeat right 30px bottom 30px;
+    margin-top: 30px;
+    background: url(../images/mv1_illust1.png) no-repeat right 30px bottom 60px;
 }
 
 .main_Visual .itm {
     position: relative;
     min-height: 968px;
-    height: 640px;
     width: 100%;
 }
 
@@ -304,7 +308,6 @@
 
 .main_Event {
     position: relative;
-    background-color: #ddd;
 }
 
 .main_Event .event_wrap {
@@ -316,7 +319,7 @@
 .main_Event .event_Box01 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 30px 0 30px 0;
+    padding-bottom: 80px;
 }
 
 .event_Box01 .tit h3 {
@@ -411,15 +414,9 @@
 
 .event_Box03 {
     position: relative;
-    padding: 80px 0 10px 0;
+    padding-top: 80px;
     overflow: hidden;
 }
-
-/* .event_Box03 .box_wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-} */
 
 .text-roller {
     color: #ededed;
@@ -435,93 +432,6 @@
     letter-spacing: 10px;
 }
 
-/* 
-
-.event_Box03 .box_wrap h3 {
-    font-size: 35px;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-.event_Box03 .box_wrap img {
-    margin-bottom: 30px;
-}
-
-.event_Box03 .box_wrap p {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.event_Box03 .box01 {
-    position: relative;
-    z-index: 1;
-}
-
-.event_Box03 .box01 .hero {
-    padding: 10px;
-}
-
-.box01 .tin_arrows {
-    position: absolute;
-    top: 30%;
-    right: 13%;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-}
-
-.box01 .tin_arrows i {
-    font-size: 40px;
-    color: rgba(0, 0, 0, 0.507);
-}
-
-.box01 .tin_arrows i:hover {
-    color: #000;
-}
-
-.event_Box03 .box02 {
-    position: relative;
-    z-index: 1;
-}
-
-
-.event_Box03 .box02 .store {
-    padding: 10px;
-}
-
-.box02 .tin_Arrows {
-    position: absolute;
-    top: 30%;
-    right: 13%;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-}
-
-.box02 .tin_Arrows i {
-    font-size: 40px;
-    color: rgba(0, 0, 0, 0.507);
-}
-
-.box02 .tin_Arrows i:hover {
-    color: #000;
-}
-
-.box02 p {
-    display: inline;
-    margin-right: 15px;
-}
-
-.box02 .mini_Slide06 span {
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 10px;
-    background: #21819E;
-}
- */
-
 @keyframes loop {
     100% {
         -webkit-transform: translateX(-100%);
@@ -532,9 +442,7 @@
 /* -------------------------------- */
 
 .sns {
-    background: #ddd;
-    padding: 10px 0 50px 0;
-
+    padding: 80px 0;
 }
 
 .sns ul {
@@ -566,19 +474,12 @@
 
 /* -------------------------------------- */
 .content {
-    background: #ddd;
     overflow: hidden;
-    padding: 60px 0;
-}
-
-.content_wrap {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 }
 
 .con_slide .menu {
     background: #fff;
     margin: 0 15px;
-
 }
 
 .con_slide .menu:hover {
